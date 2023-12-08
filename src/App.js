@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./componant/afterLogin/index.jsx";
+import LayOut from "./componant/layout/index.jsx";
+import Login from "./componant/login";
+import Eroor from "./componant/error";
+import Singup from "./componant/singup";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { ConfigProvider } from "antd";
+import { Provider } from "react-redux";
+import Store from "./componant/store/index.jsx";
+import Index from "./componant/text/index.jsx";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <LayOut />,
+      errorElement: <Eroor />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/singup",
+          element: <Singup />,
+        },
+        {
+          path: "/login",
+          element: <Login />,
+        },
+        {
+          path: "/text",
+          element: <Index />,
+        },
+      ],
+    },
+  ]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ConfigProvider>
+      <Provider store={Store}>
+        <RouterProvider router={router} />
+      </Provider>
+    </ConfigProvider>
   );
 }
 

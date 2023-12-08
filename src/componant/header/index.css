@@ -1,0 +1,14 @@
+.allparant{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(148, 219, 180, 0.2);
+    box-shadow: 0px 8px 32px 0 rgb(0, 0, 255, 0.33);
+
+}
+.parnt{
+    padding-top: 30px;
+}
+.righ{
+    margin-right: 10px;
+}
