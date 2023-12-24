@@ -18,6 +18,10 @@ function App() {
       children: [
         {
           path: "/",
+          element: <Index />,
+        },
+        {
+          path: "/home",
           element: <Home />,
         },
         {
@@ -28,10 +32,7 @@ function App() {
           path: "/login",
           element: <Login />,
         },
-        {
-          path: "/text",
-          element: <Index />,
-        },
+      
       ],
     },
   ]);

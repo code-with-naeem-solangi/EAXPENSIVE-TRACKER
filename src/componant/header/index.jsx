@@ -16,7 +16,7 @@ const Head = () => {
         </div>
         <div className="parnt">
           {user ? (
-            <Link to={"/text"}>
+            <Link to={"/"}>
               <Button type="primary" onClick={() => recive(logout())}>
                 Logout
               </Button>

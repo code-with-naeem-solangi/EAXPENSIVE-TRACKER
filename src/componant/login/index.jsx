@@ -16,7 +16,7 @@ const Login = () => {
         singUPUser.password === values.password
       ) {
         recive(loginUser(singUPUser));
-        navi("/");
+        navi("/home");
       } else {
         alert("Invalid credentials");
       }
