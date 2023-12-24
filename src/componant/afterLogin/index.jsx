@@ -131,6 +131,7 @@ const Home = () => {
                   onClick={() => {
                     edit(t);
                   }}
+                  
                 >
                   EDIT
                 </Button>

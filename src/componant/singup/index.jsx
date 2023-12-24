@@ -95,7 +95,7 @@ const Singup = () => {
               <Button
                 type="primary"
                 htmlType="submit"
-                style={{ width: "100%" }}
+                
               >
                 SingUp
               </Button>

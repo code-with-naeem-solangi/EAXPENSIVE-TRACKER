@@ -1,13 +1,23 @@
 import React from "react";
 import "./index.css";
-import { Button } from "antd";
+import { Dropdown, Space  ,Button} from 'antd';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../store/laibrayslice";
+import { DownOutlined, MenuOutlined } from '@ant-design/icons';
+
 const Head = () => {
   const recive = useDispatch();
   const user = useSelector((e) => e.user);
   console.log(user);
+  // const items = [
+  //   {
+  //     label: <Link to={"/"}>Logout</Link>,
+  //     key: '0',
+  //   },
+
+   
+  // ];
   return (
     <>
       <div className="allparant">
@@ -33,6 +43,36 @@ const Head = () => {
           )}
         </div>
       </div>
+
+      <div className='mobileview'>
+      {user ? (
+            <Link to={"/"}>
+              <Button  type="primary" onClick={() => recive(logout())}>
+                Logout
+              </Button>
+            </Link>
+          ) : (
+            <>
+              <Link to={"/login"}>
+                <Button >LOGIN</Button>
+              </Link>
+              <Link to={"/singup"}>
+                <Button className="mediaclas" type="primary">SING UP</Button>
+              </Link>
+            </>
+          )}     </div>
+      {/* <Dropdown  className='mobileview'
+    menu={{
+      items,
+    }}
+    trigger={['click']}
+  >
+    <a onClick={(e) => e.preventDefault()}>
+      <Space>
+        <MenuOutlined/>
+      </Space>
+    </a>
+  </Dropdown> */}
     </>
   );
 };

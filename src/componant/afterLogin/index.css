@@ -22,3 +22,10 @@
 .mgn{
     margin-top: 30px;
 }
+@media (max-width: 770px){
+    .prn{
+        width: 60%;
+        
+    }
+   
+}

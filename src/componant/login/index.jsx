@@ -33,7 +33,7 @@ const Login = () => {
       <div className="main">
         <h1>LOGIN PAGE</h1>
 
-        <div>
+        <div >
           <Form
             name="basic"
             labelCol={{
@@ -86,7 +86,7 @@ const Login = () => {
               <Button
                 type="primary"
                 htmlType="submit"
-                style={{ width: "100%" }}
+                
               >
                 Login
               </Button>
