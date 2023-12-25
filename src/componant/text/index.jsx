@@ -10,13 +10,10 @@ const Index = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam magni
         deleniti ut eveniet modi dolor soluta reiciendis deserunt minus,
         assumenda cumque id nemo dolores nihil voluptatum vitae! Rem, iusto
-        vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-        magni deleniti ut eveniet modi dolor soluta reiciendis deserunt minus,
-        assumenda cumque id nemo dolores nihil voluptatum vitae! Rem, iusto
         vero.
       </p>
       <Link to={"/login"}>
-        <Button style={{ width: "10%", height: "50px", fontSize: "20px" }}>
+        <Button>
           LOGIN
         </Button>
       </Link>

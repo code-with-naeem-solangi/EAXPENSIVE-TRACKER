@@ -61,18 +61,7 @@ const Head = () => {
               </Link>
             </>
           )}     </div>
-      {/* <Dropdown  className='mobileview'
-    menu={{
-      items,
-    }}
-    trigger={['click']}
-  >
-    <a onClick={(e) => e.preventDefault()}>
-      <Space>
-        <MenuOutlined/>
-      </Space>
-    </a>
-  </Dropdown> */}
+     
     </>
   );
 };
